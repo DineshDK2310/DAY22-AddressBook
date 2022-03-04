@@ -149,5 +149,23 @@ public class AddressBookMethods {
 		}
 	}
 
+	public void viewPersonByState(String state) {
+		ArrayList<AddressBook> list = (ArrayList<AddressBook>) contact.stream().filter(contactName -> contactName.getState().equals(state))
+				.collect(Collectors.toList());
+		for (AddressBook contact : list) {
+			System.out.println("Name: " + contact.getFirstName() +" "+ contact.getLastName());
+			System.out.println("State: " + state);
+		}
+	}
+
+	public void viewPersonByCity(String city2) {
+		ArrayList<AddressBook> list = (ArrayList<AddressBook>) contact.stream().filter(contactName -> contactName.getCity().equals(city))
+				.collect(Collectors.toList());
+		for (AddressBook contact : list) {
+			System.out.println("First Name: " + contact.getFirstName()+ "  " + contact.getLastName());
+			System.out.println("City: " + city);
+		}
+	}
+
 
 }
