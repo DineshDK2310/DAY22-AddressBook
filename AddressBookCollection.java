@@ -21,6 +21,8 @@ public class AddressBookCollection {
 			System.out.println("6.Search By City name");
 			System.out.println("7.View By State name");
 			System.out.println("8.View By City name");
+			System.out.println("9.Count person By City");
+			System.out.println("10.Count person By City");
 			
 			ch= sc.nextInt();
 			switch(ch) {
@@ -70,7 +72,7 @@ public class AddressBookCollection {
 				count = detail.countPersonsByState(state);
 				System.out.println("Number of persons by state "+state+" is "+count);
 				break;
-				
+			
 			}System.out.println("Do you want to continue? if yes press 1");
 			choice = sc.nextInt();
 		}while(choice == 1);

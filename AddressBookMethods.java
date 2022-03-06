@@ -155,7 +155,7 @@ public class AddressBookMethods {
 		ArrayList<AddressBook> list = (ArrayList<AddressBook>) contact.stream().filter(contactName -> contactName.getCity().equals(city))
 				.collect(Collectors.toList());
 		for (AddressBook contact : list) {
-			System.out.println("First Name: " + contact.getFirstName()+ "  " + contact.getLastName());
+			System.out.println("Name: " + contact.getFirstName()+ "  " + contact.getLastName());
 			System.out.println("City: " + city);
 		}
 	}
