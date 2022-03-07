@@ -190,6 +190,31 @@ public class AddressBookMethods {
 		}
 	}
 	
+	public void sortByCity() {
+		ArrayList<AddressBook>  sortedList = (ArrayList<AddressBook>) contact.stream().sorted((sort1, sort2) -> (sort1.getCity().compareTo(sort2.getCity()))).collect(Collectors.toList());
+		for (AddressBook contact : sortedList) {
+			System.out.println("Name: " + contact.getFirstName()+ "  " + contact.getLastName());
+			System.out.println("City: " + contact.getCity());
+			System.out.println("\n");
+		}
+	}
+	public void sortByState() {
+		ArrayList<AddressBook>  sortedList = (ArrayList<AddressBook>) contact.stream().sorted((sort1, sort2) -> (sort1.getState().compareTo(sort2.getState()))).collect(Collectors.toList());
+		for (AddressBook contact : sortedList) {
+			System.out.println("Name: " + contact.getFirstName()+ "  " + contact.getLastName());
+			System.out.println("State: " +contact.getState());
+			System.out.println("\n");
+		}
+	}
+	public void sortByZipCode() {
+		ArrayList<AddressBook>  sortedList = (ArrayList<AddressBook>) contact.stream().sorted((sort1, sort2) -> (int)(sort1.getZipCode() - sort2.getZipCode())).collect(Collectors.toList());
+		for (AddressBook contact : sortedList) {
+			System.out.println("Name: " + contact.getFirstName()+ "  " + contact.getLastName());
+			System.out.println("Zip Code: " + contact.getZipCode());
+			System.out.println("\n");
+		}
+	}
+	
 	public void DisplayContacts() {
 		System.out.println("\nContacts Present in Address Book:");
 		for(int i=0;i<contact.size();i++) {

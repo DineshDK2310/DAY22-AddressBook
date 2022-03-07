@@ -24,6 +24,9 @@ public class AddressBookCollection {
 			System.out.println("9.Count person By City");
 			System.out.println("10.Count person By City");
 			System.out.println("11.Sort By First Name");
+			System.out.println("12.Sort By City");
+			System.out.println("13.Sort By State");
+			System.out.println("14.Sort By ZipCode");
 			
 			ch= sc.nextInt();
 			switch(ch) {
@@ -75,6 +78,15 @@ public class AddressBookCollection {
 				break;
 			case 11:
 				detail.sortByFirstName();
+				break;
+			case 12:
+				detail.sortByCity();
+				break;
+			case 13:
+				detail.sortByState();
+				break;
+			case 14:
+				detail.sortByZipCode();
 				break;
 			
 			}System.out.println("Do you want to continue? if yes press 1");
