@@ -23,6 +23,7 @@ public class AddressBookCollection {
 			System.out.println("8.View By City name");
 			System.out.println("9.Count person By City");
 			System.out.println("10.Count person By City");
+			System.out.println("11.Sort By First Name");
 			
 			ch= sc.nextInt();
 			switch(ch) {
@@ -71,6 +72,9 @@ public class AddressBookCollection {
 				state = sc.next();
 				count = detail.countPersonsByState(state);
 				System.out.println("Number of persons by state "+state+" is "+count);
+				break;
+			case 11:
+				detail.sortByFirstName();
 				break;
 			
 			}System.out.println("Do you want to continue? if yes press 1");

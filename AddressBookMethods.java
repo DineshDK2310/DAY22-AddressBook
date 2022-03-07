@@ -182,6 +182,14 @@ public class AddressBookMethods {
 		return count;
 	}
 	
+	public void sortByFirstName() {
+		ArrayList<AddressBook>  sortedList = (ArrayList<AddressBook>) contact.stream().sorted((sort1, sort2) -> (sort1.getFirstName()
+				.compareTo(sort2.getFirstName()))).collect(Collectors.toList());
+		for (AddressBook contact : sortedList) {
+			System.out.println("Name: " + contact.getFirstName()+ "  " + contact.getLastName());
+		}
+	}
+	
 	public void DisplayContacts() {
 		System.out.println("\nContacts Present in Address Book:");
 		for(int i=0;i<contact.size();i++) {
