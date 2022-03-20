@@ -27,6 +27,8 @@ public class AddressBookCollection {
 			System.out.println("12.Sort By City");
 			System.out.println("13.Sort By State");
 			System.out.println("14.Sort By ZipCode");
+			System.out.println("15.Write data to file");
+			System.out.println("16.Read data from file");
 			
 			ch= sc.nextInt();
 			switch(ch) {
@@ -87,6 +89,12 @@ public class AddressBookCollection {
 				break;
 			case 14:
 				detail.sortByZipCode();
+				break;
+			case 15:
+				detail.writeData();;
+				break;
+			case 16:
+				detail.readFileData();;
 				break;
 			
 			}System.out.println("Do you want to continue? if yes press 1");
