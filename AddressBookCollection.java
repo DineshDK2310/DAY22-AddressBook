@@ -29,6 +29,8 @@ public class AddressBookCollection {
 			System.out.println("14.Sort By ZipCode");
 			System.out.println("15.Write data to file");
 			System.out.println("16.Read data from file");
+			System.out.println("17.Write data to csv file");
+			System.out.println("18.Read data from csv file");
 			
 			ch= sc.nextInt();
 			switch(ch) {
@@ -95,6 +97,12 @@ public class AddressBookCollection {
 				break;
 			case 16:
 				detail.readFileData();;
+				break;
+			case 17:
+				detail.writeDataCSV();
+				break;
+			case 18:
+				detail.readFileDataCSV();
 				break;
 			
 			}System.out.println("Do you want to continue? if yes press 1");

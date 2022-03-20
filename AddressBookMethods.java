@@ -250,5 +250,24 @@ public class AddressBookMethods {
         }
     }
     
-   
+    public void writeDataCSV() {
+        StringBuffer personBuffer = new StringBuffer();
+        contact.forEach(person -> {
+            String personDataString = person.toString().concat("\n");
+            personBuffer.append(personDataString);
+        });
+        try {
+            Files.write(Paths.get("Data.csv"), personBuffer.toString().getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void readFileDataCSV() {
+        try {
+            Files.lines(new File("Data.csv").toPath()).map(String::trim).forEach(System.out::println);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }  
 }
